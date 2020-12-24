@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record model="ir.module.category" id="module_management">
+            <field name="name">Cotizador</field>
+            <field name="description">Permisos de acceso para el modulo cotizador</field>
+            <field name="sequence">3</field>
+        </record>
+
+        <record id="read_group" model="res.groups">
+            <field name="name">Usuario: Lectura</field>
+            <field name="comment">Permisos de lectura para el modulo cotizador</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="quote.module_management" />
+        </record>
+
+        <record id="user_group" model="res.groups">
+            <field name="name">Usuario: Modificación</field>
+            <field name="comment">Permisos de lectura y escritura para el modulo cotizador</field>
+            <field name="implied_ids" eval="[(4, ref('quote.read_group'))]"/>
+            <field name="category_id" ref="quote.module_management" />
+        </record>
+
+        <record id="operation_group" model="res.groups">
+            <field name="name">Usuario: Creación y modificación</field>
+            <field name="comment">Permisos de creación y modificación para el modulo cotizador</field>
+            <field name="implied_ids" eval="[(4, ref('quote.user_group'))]"/>
+            <field name="category_id" ref="quote.module_management" />
+        </record>
+
+        <record id="admin_group" model="res.groups">
+            <field name="name">Administrador</field>
+            <field name="comment">Permisos de administrador para el modulo cotizador, es el unico rol que puede aprobar</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('quote.operation_group'))]"/>
+            <field name="category_id" ref="quote.module_management" />
+        </record>
+
+    </data>
+</odoo>

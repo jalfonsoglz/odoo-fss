@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <menuitem id="quote_menu"
+                  web_icon="quote,static/description/icon.png"
+                  name="Cotizador" />
+
+        <menuitem id="quote_quotation_menu"
+                  parent="quote_menu"
+                  action="quotation_menu_action"
+                  name="Cotizaciones" />
+    </data>
+</odoo>

@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+quote_quotation_admin,quote.quotation,model_quote_quotation,admin_group,1,1,1,1
+quote_quotation_operation,quote.quotation,model_quote_quotation,operation_group,1,1,1,0
+quote_quotation_user,quote.quotation,model_quote_quotation,user_group,1,1,0,0
+quote_quotation_read,quote.quotation,model_quote_quotation,read_group,1,0,0,0
+quote_quotation_line_full,quote.quotation.line,model_quote_quotation_line,admin_group,1,1,1,1
+quote_quotation_line_operation,quote.quotation.line,model_quote_quotation_line,operation_group,1,1,1,0
+quote_quotation_line_create,quote.quotation.line,model_quote_quotation_line,user_group,1,1,0,0
+quote_quotation_line_read,quote.quotation.line,model_quote_quotation_line,read_group,1,0,0,0
