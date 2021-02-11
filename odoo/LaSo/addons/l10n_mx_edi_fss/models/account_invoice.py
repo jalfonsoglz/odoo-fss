@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
+import base64
+from lxml import etree
+from lxml.objectify import fromstring
 
 from odoo import api, fields, models, _
 
