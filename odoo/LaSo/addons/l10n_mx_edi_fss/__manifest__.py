@@ -7,7 +7,7 @@
     "author": "gsisa.asilva@gmail.com",
     'license': 'OEEL-1',
     "depends": [
-        'l10n_edi_mx',
+        'l10n_mx_edi',
     ],
     'data': [
     ],
