@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_expense_view_form_uuid_fss" model="ir.ui.view">
+        <field name="name">hr.expense.form.uuid.fss</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_form"/>
+        <field name="priority">30</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='reference']" position="after">
+                <field name="hr_expense_uuid"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
