@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, fields, models
+from odoo import api, fields, models, _
 
 class Quotation(models.Model):
     _name = "quote.quotation"
@@ -25,7 +25,8 @@ class Quotation(models.Model):
                              required = True,
                              readonly = True,
                              states = {'draft' : [('readonly', False)]},
-                             index = True)
+                             index = True,
+                             default=lambda self: _('New'))
 
     quote_date = fields.Datetime(string = 'Fecha de cotización',
                                  required = True,
@@ -98,6 +99,7 @@ class Quotation(models.Model):
                 purchase = order.create({
                     'partner_id': line.vendor.name.id,
                     'currency_id': line.currency_id.id,
+                    'origin': line.quotation_id.name,
                     'order_line': [(0,0,{
                         'product_id':line.product.id,
                         'name': line.name,
@@ -118,3 +120,16 @@ class Quotation(models.Model):
 
     def action_review(self):
         self.state = 'review'
+
+    @api.model
+    def create(self, vals):
+        if vals.get('name', _('New')) == _('New'):
+            seq_date = None
+            if 'quote_date' in vals:
+                seq_date = fields.Datetime.context_timestamp(self, fields.Datetime.to_datetime(vals['quote_date']))
+            if 'company_id' in vals:
+                vals['name'] = self.env['ir.sequence'].with_context(force_company=vals['company_id']).next_by_code(
+                    'quote.quotation', sequence_date=seq_date) or _('New')
+            else:
+                vals['name'] = self.env['ir.sequence'].next_by_code('quote.quotation', sequence_date=seq_date) or _('New')
+        return super(Quotation, self).create(vals)

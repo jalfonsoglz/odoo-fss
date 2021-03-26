@@ -9,6 +9,8 @@
     'summary' : 'Utilidad de gestión de cotizaciones',
     'depends' : ['base','sale','purchase','account_analytic_default_purchase'],
     'data' : [
+        # data
+        'data/ir_sequence_data.xml',
         # security
         'security/quote_security.xml',
         'security/ir.model.access.csv',
