@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree View -->
+    <record id="view_quote_tree" model="ir.ui.view">
+        <field name="name">quote.quotation.view.tree</field>
+        <field name="model">quote.quotation</field>
+        <field name="inherit_id" ref="quote.view_quote_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+              <field name="sequence" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_quote_form" model="ir.ui.view">
+        <field name="name">quote.quotation.view.form</field>
+        <field name="model">quote.quotation</field>
+        <field name="inherit_id" ref="quote.view_quote_form" />
+        <field name="arch" type="xml">
+            <xpath expr="/form/sheet/div[hasclass('oe_title')]" position="before">
+              <div class="oe_button_box" name="button_box">
+                <button name="action_view_purchase" type="object" class="oe_stat_button" icon="fa-pencil-square-o" attrs="{'invisible': [('po_count', '=', 0)]}">
+                  <field name="po_count" widget="statinfo" string="Compras"/>
+                </button>
+              </div>
+            </xpath>
+            <xpath expr="//field[@name='quote_budget']" position="before">
+              <field name="sequence" />
+              <field name="order_id" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

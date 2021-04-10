@@ -25,8 +25,7 @@ class Quotation(models.Model):
                              required = True,
                              readonly = True,
                              states = {'draft' : [('readonly', False)]},
-                             index = True,
-                             default=lambda self: _('New'))
+                             index = True)
 
     quote_date = fields.Datetime(string = 'Fecha de cotización',
                                  required = True,
@@ -120,16 +119,3 @@ class Quotation(models.Model):
 
     def action_review(self):
         self.state = 'review'
-
-    @api.model
-    def create(self, vals):
-        if vals.get('name', _('New')) == _('New'):
-            seq_date = None
-            if 'quote_date' in vals:
-                seq_date = fields.Datetime.context_timestamp(self, fields.Datetime.to_datetime(vals['quote_date']))
-            if 'company_id' in vals:
-                vals['name'] = self.env['ir.sequence'].with_context(force_company=vals['company_id']).next_by_code(
-                    'quote.quotation', sequence_date=seq_date) or _('New')
-            else:
-                vals['name'] = self.env['ir.sequence'].next_by_code('quote.quotation', sequence_date=seq_date) or _('New')
-        return super(Quotation, self).create(vals)
