@@ -31,6 +31,7 @@ class Quotation(models.Model):
                 'partner_invoice_id': quote.customer.id,
                 'partner_shipping_id': quote.customer.id,
                 'origin': quote.sequence,
+                'client_order_ref': quote.customer_po,
                 #'pricelist_id': self.pricelist.id,
                 'order_line': [(0, 0, {
                     'name': line.name,
