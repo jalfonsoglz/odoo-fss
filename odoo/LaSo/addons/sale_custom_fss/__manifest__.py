@@ -7,6 +7,7 @@
     "author": "gsisa.asilva@gmail.com",
     "depends": [
         'quote',
+        'crm',
         'sale_margin',
     ],
     'data': [
