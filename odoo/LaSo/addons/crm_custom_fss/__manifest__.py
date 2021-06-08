@@ -6,10 +6,11 @@
     'category': 'Hidden',
     "author": "gsisa.asilva@gmail.com",
     "depends": [
-        'sale',
-        'crm',
+        'sale_custom_fss',
     ],
     'data': [
+        'data/ir_sequence_data.xml',
+        'views/crm_lead_view.xml',
     ],
     'qweb': [
     ],

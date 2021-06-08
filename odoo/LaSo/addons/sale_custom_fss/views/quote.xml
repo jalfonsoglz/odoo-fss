@@ -28,6 +28,7 @@
             <xpath expr="//field[@name='quote_budget']" position="before">
               <field name="sequence" />
               <field name="order_id" />
+              <field name="opportunity_id" />
             </xpath>
         </field>
     </record>

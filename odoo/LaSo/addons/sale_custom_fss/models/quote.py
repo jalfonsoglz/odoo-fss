@@ -20,6 +20,9 @@ class Quotation(models.Model):
 
     po_count = fields.Integer(string='Purchase Orders', compute='_compute_purchase_order')
 
+    opportunity_id = fields.Many2one(
+        'crm.lead', string='Opportunity', domain="[('type', '=', 'opportunity')]")
+
     def _compute_purchase_order(self):
         for order in self:
             order.po_count = len(self.env['purchase.order'].search([('origin','=',order.sequence)]))
