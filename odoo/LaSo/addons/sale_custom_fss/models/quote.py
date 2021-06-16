@@ -1,16 +1,22 @@
 # -*- coding: utf-8 -*-
 
+from datetime import date, datetime
+from dateutil.relativedelta import relativedelta
+
 from odoo import api, fields, models, _
 
 class Quotation(models.Model):
     _inherit = "quote.quotation"
 
+    state = fields.Selection(selection_add=[('sent', 'Enviada'),('done', 'Completada')])
     sequence = fields.Char(string = 'Folio',
                              required = True,
                              readonly = True,
                              index = True,
                              copy = False,
                              default=lambda self: _('New'))
+    requisitor_ref = fields.Char(string = 'Número de Solicitud de Requisitor',
+                             copy = False)
 
     order_id = fields.Many2one('sale.order',
                                string = 'Presupuesto',
@@ -21,13 +27,21 @@ class Quotation(models.Model):
     po_count = fields.Integer(string='Purchase Orders', compute='_compute_purchase_order')
 
     opportunity_id = fields.Many2one(
-        'crm.lead', string='Opportunity', domain="[('type', '=', 'opportunity')]")
+        'crm.lead', string='Opportunity', domain="[('type', '=', 'opportunity')]", copy = False)
+
+    user_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True)
+    with_standard_price = fields.Boolean(compute='_compute_with_standard_price')
+
+    @api.depends('quote_line','quote_line.price_unit')
+    def _compute_with_standard_price(self):
+        for record in self:
+            record.with_standard_price = record.quote_line and all(record.quote_line.mapped('price_unit'))
 
     def _compute_purchase_order(self):
         for order in self:
             order.po_count = len(self.env['purchase.order'].search([('origin','=',order.sequence)]))
 
-    def _create_order(self):
+    def action_create_order(self):
         for quote in self:
             order = self.env['sale.order'].create({
                 'partner_id': quote.customer.id,
@@ -35,6 +49,7 @@ class Quotation(models.Model):
                 'partner_shipping_id': quote.customer.id,
                 'origin': quote.sequence,
                 'client_order_ref': quote.customer_po,
+                'requisitor_ref': quote.requisitor_ref,
                 #'pricelist_id': self.pricelist.id,
                 'order_line': [(0, 0, {
                     'name': line.name,
@@ -66,8 +81,7 @@ class Quotation(models.Model):
             action['res_id'] = purchases.id
         return action
 
-    def action_approve(self):
-        self.state = 'approved'
+    def _action_approve(self):
         orders = 0
         msj = "<h3><b>¡La cotización ha sido aprobada!</b></h3>"
         for line in self.quote_line:
@@ -97,9 +111,34 @@ class Quotation(models.Model):
             msj += "<b><h4>" + str(orders) + " Solicitudes de compra generadas</h4></b>"
         else:
             msj += "<b><h4>Se generó una solicitud de compra</h4></b>"
+        for quote in self:
+            quote.message_post(body=msj)
+        self.state = 'approved'
 
-        self.message_post(body=msj)
-        self._create_order()
+    def action_approve(self):
+        self.mapped('order_id').filtered(lambda r: r.state in ['draft','sent']).action_confirm_from_quote()
+        self.filtered(lambda r: r.state in ('review','sent'))._action_approve()
+
+    def button_request_adjustment(self):
+        self.env['mail.activity'].create({
+            'summary': 'Solicitud de ajuste:%s'%self.name,
+            'date_deadline': date.today() + relativedelta(days=1),
+            'activity_type_id': self.env.ref('mail.mail_activity_data_todo').id,
+            'res_model_id': self.env['ir.model']._get(self._name).id,
+            'res_id': self.id,
+        })
+
+    def button_request_price(self):
+        for quote in self.filtered('user_id'):
+            self.env['mail.activity'].create({
+                'summary': 'Solicitud de precio:%s'%quote.name,
+                'date_deadline': date.today() + relativedelta(days=1),
+                'activity_type_id': self.env.ref('mail.mail_activity_data_todo').id,
+                'user_id': quote.user_id.id,
+                'res_model_id': self.env['ir.model']._get(self._name).id,
+                'res_id': quote.id,
+            })
+        self.state = 'review'
 
     @api.model
     def create(self, vals):

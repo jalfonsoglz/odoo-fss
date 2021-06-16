@@ -20,6 +20,9 @@
             <xpath expr="//field[@name='payment_term_id']" position="after">
               <xpath expr="//field[@name='client_order_ref']" position="move"/>
             </xpath>
+            <xpath expr="//field[@name='client_order_ref']" position="after">
+              <field name="requisitor_ref"/>
+            </xpath>
         </field>
     </record>
 

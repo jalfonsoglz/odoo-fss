@@ -18,6 +18,23 @@
         <field name="model">quote.quotation</field>
         <field name="inherit_id" ref="quote.view_quote_form" />
         <field name="arch" type="xml">
+            <xpath expr="/form/header/button[@name='action_approve']" position="before">
+               <button name="action_create_order" attrs="{'invisible': ['|',('order_id', '!=', False),('state', '!=', 'review')]}" type="object" string="Crear Cotización" groups="quote.admin_group" />
+            </xpath>
+            <xpath expr="/form/header/button[@name='action_approve']" position="before">
+              <button name="button_request_price" states="draft" type="object" string="Solicitar Precio" groups="quote.admin_group" />
+              <field name="with_standard_price" invisible="1"/>
+            </xpath>
+            <xpath expr="/form/header/button[@name='action_approve']" position="attributes">
+              <attribute name="states"></attribute>
+              <attribute name="attrs">{'invisible': ['|','|',('with_standard_price', '=', False),('state', 'not in', ('review','sent')),('order_id', '=', False)]}</attribute>
+            </xpath>
+            <xpath expr="/form/header/button[@name='action_review']" position="attributes">
+               <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='state']" position="attributes">
+               <attribute name="statusbar_visible">draft,review,sent,approved,done</attribute>
+            </xpath>
             <xpath expr="/form/sheet/div[hasclass('oe_title')]" position="before">
               <div class="oe_button_box" name="button_box">
                 <button name="action_view_purchase" type="object" class="oe_stat_button" icon="fa-pencil-square-o" attrs="{'invisible': [('po_count', '=', 0)]}">
@@ -29,6 +46,12 @@
               <field name="sequence" />
               <field name="order_id" />
               <field name="opportunity_id" />
+            </xpath>
+            <xpath expr="//field[@name='quote_date']" position="after">
+              <field name="user_id" />
+            </xpath>
+            <xpath expr="//field[@name='customer_po']" position="after">
+              <field name="requisitor_ref" />
             </xpath>
         </field>
     </record>
