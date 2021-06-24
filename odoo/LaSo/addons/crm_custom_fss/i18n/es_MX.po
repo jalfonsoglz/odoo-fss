@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_custom_fss
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-24 01:14+0000\n"
+"PO-Revision-Date: 2021-06-24 01:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_custom_fss
+#: model:ir.model.fields,field_description:crm_custom_fss.field_crm_lead__sequence
+msgid "Folio"
+msgstr "Folio"
+
+#. module: crm_custom_fss
+#: model:ir.model,name:crm_custom_fss.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: crm_custom_fss
+#: code:addons/crm_custom_fss/models/crm_lead.py:0
+#: code:addons/crm_custom_fss/models/crm_lead.py:0
+#: code:addons/crm_custom_fss/models/crm_lead.py:0
+#: code:addons/crm_custom_fss/models/crm_lead.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: crm_custom_fss
+#: model:ir.model.fields,field_description:crm_custom_fss.field_crm_lead__quote_count
+msgid "Number of Qoutes"
+msgstr "Número de Cotizaciones"
+
+#. module: crm_custom_fss
+#: model:ir.model.fields,field_description:crm_custom_fss.field_crm_lead__quote_ids
+msgid "Qoutes"
+msgstr "Cotizaciones"
+
+#. module: crm_custom_fss
+#: model_terms:ir.ui.view,arch_db:crm_custom_fss.crm_lead_view_form
+msgid "Quotes"
+msgstr "Cotizaciones"
+
+#. module: crm_custom_fss
+#: model:ir.model,name:crm_custom_fss.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
