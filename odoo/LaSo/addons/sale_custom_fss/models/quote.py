@@ -116,17 +116,12 @@ class Quotation(models.Model):
         self.state = 'approved'
 
     def action_approve(self):
-        self.mapped('order_id').filtered(lambda r: r.state in ['draft','sent']).action_confirm_from_quote()
         self.filtered(lambda r: r.state in ('review','sent'))._action_approve()
+        sale_order_to_confirm = self.mapped('order_id').filtered(lambda r: r.state in ['draft','sent'])
+        sale_order_to_confirm.action_confirm()
 
-    def button_request_adjustment(self):
-        self.env['mail.activity'].create({
-            'summary': 'Solicitud de ajuste:%s'%self.name,
-            'date_deadline': date.today() + relativedelta(days=1),
-            'activity_type_id': self.env.ref('mail.mail_activity_data_todo').id,
-            'res_model_id': self.env['ir.model']._get(self._name).id,
-            'res_id': self.id,
-        })
+        for lead in self.mapped('opportunity_id'):
+            lead.action_set_won_rainbowman()
 
     def button_request_price(self):
         for quote in self.filtered('user_id'):
