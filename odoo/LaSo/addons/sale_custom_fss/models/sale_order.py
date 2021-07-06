@@ -11,9 +11,20 @@ from odoo import api, fields, models
 class SaleOrder(models.Model):
     _inherit = "sale.order"
 
+    sale_type = fields.Selection(
+        [
+            ('fix', 'Servicio Fijo'),
+            ('supply', 'Suministro'),
+            ('construction', 'Obra')
+        ],
+        string='Tipo de Cotización', readonly=True, copy=False,
+        states={'draft': [('readonly', False)], 'sent': [('readonly', False)]},
+    )
+
     margin_percent = fields.Float(string="Margin(%)", compute='_product_margin_percent')
     requisitor_ref = fields.Char(string = 'Número de Solicitud de Requisitor', copy = False)
     is_shipped = fields.Boolean(compute="_compute_is_shipped", store=True, copy = False)
+    quote_id = fields.Many2one('quote.quotation', string='Documento Origen', readonly=True, ondelete='restrict', index=True, copy=False)
 
     @api.depends('picking_ids', 'picking_ids.state')
     def _compute_is_shipped(self):

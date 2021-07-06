@@ -8,7 +8,8 @@ from odoo import api, fields, models, _
 class Quotation(models.Model):
     _inherit = "quote.quotation"
 
-    state = fields.Selection(selection_add=[('sent', 'Enviada'),('done', 'Completada')])
+    customer_po = fields.Char(required = False)
+    state = fields.Selection(selection_add=[('sent', 'Enviada'),('approved', 'Aprobada'),('done', 'Completada')])
     sequence = fields.Char(string = 'Folio',
                              required = True,
                              readonly = True,
@@ -47,6 +48,7 @@ class Quotation(models.Model):
                 'partner_id': quote.customer.id,
                 'partner_invoice_id': quote.customer.id,
                 'partner_shipping_id': quote.customer.id,
+                'quote_id': quote.id,
                 'origin': quote.sequence,
                 'client_order_ref': quote.customer_po,
                 'requisitor_ref': quote.requisitor_ref,
