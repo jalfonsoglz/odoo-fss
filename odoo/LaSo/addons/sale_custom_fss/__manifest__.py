@@ -2,7 +2,7 @@
 
 {
     "name": 'Sale custom FSS',
-    "version": "0.1",
+    "version": "0.2",
     'category': 'Hidden',
     "author": "gsisa.asilva@gmail.com",
     "depends": [
