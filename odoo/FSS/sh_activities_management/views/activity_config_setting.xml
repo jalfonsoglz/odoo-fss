@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="sh_activity_config_view" model="ir.ui.view">
+			<field name="name">res.config.settings</field>
+			<field name="model">res.config.settings</field>
+			<field name="inherit_id" ref="sh_activity_base.sh_res_config_settings_mail_activity_form_inherit" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@data-key='sh_activity_base']//div[hasclass('row','mt16','o_settings_container')]" position="after">
+					<h2 id="multi_users">Multi Users in Activity Configuration</h2>
+					<div class="row mt16 o_settings_container" id="multi_users_div">
+						<div class="col-6 o_setting_box">
+							<div class="o_setting_left_pane">
+								<field name="sh_display_multi_user" />
+							</div>
+							<div class="o_setting_right_pane">
+								<label for="sh_display_multi_user" />
+								<div class="text-muted"></div>
+							</div>
+						</div>
+					</div>
+					<h2 id="dashboard_heading">Dashboard Configuration</h2>
+					<div class="row mt16 o_settings_container" id="dashboard_div">
+						<div class="col-md-6 o_setting_box">
+							<div class="o_setting_right_pane">
+								<label for="sh_planned_table" />
+								<br />
+								<field name="sh_planned_table" class="oe_inline" />
+							</div>
+							<div class="o_setting_left_pane"></div>
+						</div>
+						<div class="col-md-6 o_setting_box">
+							<div class="o_setting_right_pane">
+								<label for="sh_all_table" />
+								<br />
+								<field name="sh_all_table" class="oe_inline" />
+							</div>
+							<div class="o_setting_left_pane"></div>
+						</div>
+						<div class="col-md-6 o_setting_box">
+							<div class="o_setting_right_pane">
+								<label for="sh_completed_table" />
+								<br />
+								<field name="sh_completed_table" class="oe_inline" />
+							</div>
+							<div class="o_setting_left_pane"></div>
+						</div>
+						<div class="col-md-6 o_setting_box">
+							<div class="o_setting_right_pane">
+								<label for="sh_due_table" />
+								<br />
+								<field name="sh_due_table" class="oe_inline" />
+							</div>
+							<div class="o_setting_left_pane"></div>
+						</div>
+					</div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>
