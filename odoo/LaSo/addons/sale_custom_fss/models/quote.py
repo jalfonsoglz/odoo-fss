@@ -8,8 +8,12 @@ from odoo import api, fields, models, _
 class Quotation(models.Model):
     _inherit = "quote.quotation"
 
-    customer_po = fields.Char(required = False)
     state = fields.Selection(selection_add=[('sent', 'Enviada'),('approved', 'Aprobada'),('done', 'Completada')])
+    customer_po = fields.Char(string = 'OC de cliente',
+                              required = False,
+                              readonly = False,
+                              states = {'approved': [('readonly', True)], 'done': [('readonly', True)]},
+                              index = True)
     sequence = fields.Char(string = 'Folio',
                              required = True,
                              readonly = True,
