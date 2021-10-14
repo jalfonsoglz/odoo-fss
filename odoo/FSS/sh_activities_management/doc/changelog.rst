@@ -59,3 +59,60 @@ Version 13.0.5(19th Oct 2020)
 ---------------------------------
 [ADD] add activity tag model and tree view and take as m2m in mail.activity model and put in search view and activity popup.
 
+13.0.17 (Date : 22nd April 2021)
+--------------------------------
+[ADD]
+-----
+1)Assign To field is added in activity tree view.
+2)Cancel Button is added in activity form view and cancel state is added.
+3)Cancel activities filter is added in activity search view.
+4)Document Name is added in activity form view.
+5)Related Document Model is added in activity form view.
+6)Mark ad done and Cancel multi actions is added in activity model.
+7)Configuration are added for display counter and data tables.
+8)Cancelled Counter and Data table is added in dashboard.
+9)Cancel and Archive button are added in related data tables.
+
+13.0.18 (Date : 28th April 2021)
+----------------------------------
+[FIX] small bug fixed of if activity already overdue then not display overdue.
+
+13.0.19 (Date : 5th May 2021)
+----------------------------------
+[ADD]added activity reminder functionality.
+
+13.0.20 (Date : 12th May 2021)
+---------------------------------
+[FIX] fix error of external id not found and fix some positions of menus.
+
+13.0.21 (Date : 15th May 2021)
+-----------------------------------
+[ADD]multi edit is added in activity list view,search panel is added in activity views kanban and tree,edit button and origin are added in activity tree view and edit button is dashboard view.
+
+-----------------------------------
+[UPDATE] update bus.bus notification type.
+
+13.0.22 (Date : 16th July 2021)
+-----------------------------------
+[FIX] fix state field searchable for dashboard.
+[FIX] fix domain in users fetch not consider portal users.
+[FIX] fix render method inside start method in js.
+
+13.0.23 (Date : 23rd July 2021)
+----------------------------------
+[ADD] display create button and create manually activity from activity view.
+[ADD] some filter and group by added in search view.
+
+13.0.24 (Date : 10th August 2021)
+----------------------------------------
+[ADD] configuration is added for document models.
+[ADD] document model and related record filter is added and data will filtered with that.
+[ADD] design changes in dashboard filter.
+
+13.0.25 (Date : 27th August 2021)
+-----------------------------------------
+[FIX] small bug fixed of datalist(Filter) element when lots of data are avaialble.
+
+13.0.26 (Date : 7th October 2021)
+------------------------------------------
+[FIX] fix activity data,icon etc with systray activities of users.

@@ -15,8 +15,10 @@ class ActivityFeedback(models.TransientModel):
         active_id = self.env.context.get('active_id')
         activity_id = self.env['mail.activity'].sudo().browse(active_id)
         activity_id.state='done'
+        activity_id._compute_state()
         activity_id.active=False
         activity_id.date_done = fields.Date.today()
+        activity_id.activity_done = True
         activity_id.feedback = self.feedback
         messages = self.env['mail.message']
         record = self.env[activity_id.res_model].sudo().browse(activity_id.res_id)
@@ -36,6 +38,7 @@ class ActivityFeedback(models.TransientModel):
         active_id = self.env.context.get('active_id')
         activity_id = self.env['mail.activity'].sudo().browse(active_id)
         activity_id.state='done'
+        activity_id._compute_state()
         activity_id.active=False
         activity_id.date_done = fields.Date.today()
         activity_id.feedback = self.feedback
