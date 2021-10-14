@@ -2,6 +2,7 @@
 # Part of Softhealer Technologies.
 
 from odoo import models, fields, api
+from datetime import timedelta
 
 
 class MailActivityPopup(models.TransientModel):
@@ -27,6 +28,8 @@ class MailActivityPopup(models.TransientModel):
     sh_create_individual_activity = fields.Boolean('Individual activities for multi users ?')
     sh_activity_tags = fields.Many2many(
         "sh.activity.tags", string='Activity Tags')
+    sh_activity_alarm_ids = fields.Many2many('sh.activity.alarm',string = 'Reminders')
+    sh_reminder_date_deadline = fields.Datetime('Reminder Due Date', default=lambda self: fields.Datetime.now())
 
     @api.depends('company_id')
     def _compute_sh_display_multi_user(self):
@@ -35,6 +38,13 @@ class MailActivityPopup(models.TransientModel):
                 rec.sh_display_multi_user = False
                 if rec.company_id and rec.company_id.sh_display_multi_user:
                     rec.sh_display_multi_user = True
+
+    @api.onchange('sh_date_deadline')
+    def _onchange_sh_date_deadline(self):
+        if self:
+            for rec in self:
+                if rec.sh_date_deadline:
+                    rec.sh_reminder_date_deadline = rec.sh_date_deadline + timedelta(hours=0, minutes=0, seconds=0)
     
     def action_schedule_activity(self):
         if self.env.context.get('active_ids'):
@@ -52,7 +62,9 @@ class MailActivityPopup(models.TransientModel):
                         'summary': self.sh_summary,
                         'res_model': self.env.context.get('active_model'),
                         'note': self.sh_note,
-                        'sh_activity_tags': [(6, 0, self.sh_activity_tags.ids)]
+                        'sh_activity_tags': [(6, 0, self.sh_activity_tags.ids)],
+                        'sh_activity_alarm_ids':[(6, 0, self.sh_activity_alarm_ids.ids)],
+                        'sh_date_deadline':self.sh_reminder_date_deadline,
                 })
                 if self.sh_user_ids and self.sh_create_individual_activity:
                     for user in self.sh_user_ids:
@@ -68,5 +80,7 @@ class MailActivityPopup(models.TransientModel):
                                 'summary': self.sh_summary,
                                 'res_model': self.env.context.get('active_model'),
                                 'note': self.sh_note,
-                                'sh_activity_tags': [(6, 0, self.sh_activity_tags.ids)]
+                                'sh_activity_tags': [(6, 0, self.sh_activity_tags.ids)],
+                                'sh_activity_alarm_ids':[(6, 0, self.sh_activity_alarm_ids.ids)],
+                                'sh_date_deadline':self.sh_reminder_date_deadline,
                             })

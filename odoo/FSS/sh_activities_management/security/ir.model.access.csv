@@ -4,3 +4,5 @@ access_activity_feedback,access_activity_feedback,model_activity_feedback,base.g
 access_sh_mail_activity,access_sh_mail_activity,model_sh_mail_activity,base.group_user,1,1,1,1
 access_sh_activity_dynamic_action,access_sh_activity_dynamic_action,model_sh_activity_dynamic_action,base.group_user,1,1,1,1
 access_sh_activity_tags,access_sh_activity_tags,model_sh_activity_tags,base.group_user,1,1,1,1
+access_sh_mark_as_done,access_sh_mark_as_done,model_sh_mark_as_done,base.group_user,1,1,1,1
+access_sh_activity_alarm,access_sh_activity_alarm,model_sh_activity_alarm,base.group_user,1,1,1,1
