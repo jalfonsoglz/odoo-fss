@@ -1,0 +1,1459 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_activities_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-14 01:33+0000\n"
+"PO-Revision-Date: 2021-10-22 18:08-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: sh_activities_management
+#: model:mail.template,body_html:sh_activities_management.template_mail_activity_due_notify_email_create_user
+msgid ""
+"\n"
+"            \n"
+"            <p>Dear ${object.create_uid.partner_id.name},\n"
+"            </p>\n"
+"\t\t\t<p>\n"
+"\t\t\t\tYour Activity # ${object.activity_type_id.name} \n"
+"\t\t\t\t% if object.summary \n"
+"\t\t\t\t\"${object.summary}\"\n"
+"\t\t\t\t% endif\n"
+"\t\t\t\tscheduled on ${object.date_deadline} is due.\n"
+"\t\t\t</p>\n"
+"\t\t\t\n"
+"\t\t\t<p>\t\n"
+"\t\t\t\t% if object.note\n"
+"\t\t\t\tNote :\n"
+"\t\t\t\t${object.text_note}  \n"
+"\t\t\t\t% endif\n"
+"            </p>\n"
+"            <p>Thank you</p>\n"
+"\t\t\t <div style=\"display: inline-block; margin: 15px; text-align: left"
+"\">\n"
+"                    <a href=\"/mail/view?model=${object.res_model}&amp;"
+"res_id=${object.res_id}\" target=\"_blank\"\n"
+"                        style=\"padding: 5px 10px; color: #FFFFFF; text-"
+"decoration: none; background-color: #875A7B; border: 1px solid #875A7B; "
+"border-radius: 3px\"\n"
+"                    >View</a>\n"
+"                </div>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n"
+"\t\t\t"
+msgstr ""
+"\n"
+"            \n"
+"            <p>Estimado ${object.create_uid.partner_id.name},\n"
+"            </p>\n"
+"\t\t\t<p>\n"
+"\t\t\t\tSu actividad # ${object.activity_type_id.name} \n"
+"\t\t\t\t% if object.summary \n"
+"\t\t\t\t\"${object.summary}\"\n"
+"\t\t\t\t% endif\n"
+"\t\t\t\tagendada el ${object.date_deadline} esta por vencer.\n"
+"\t\t\t</p>\n"
+"\t\t\t\n"
+"\t\t\t<p>\t\n"
+"\t\t\t\t% if object.note\n"
+"\t\t\t\tNota :\n"
+"\t\t\t\t${object.text_note}  \n"
+"\t\t\t\t% endif\n"
+"            </p>\n"
+"            <p>Gracias</p>\n"
+"\t\t\t <div style=\"display: inline-block; margin: 15px; text-align: left"
+"\">\n"
+"                    <a href=\"/mail/view?model=${object.res_model}&amp;"
+"res_id=${object.res_id}\" target=\"_blank\"\n"
+"                        style=\"padding: 5px 10px; color: #FFFFFF; text-"
+"decoration: none; background-color: #875A7B; border: 1px solid #875A7B; "
+"border-radius: 3px\"\n"
+"                    >View</a>\n"
+"                </div>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n"
+"\t\t\t"
+
+#. module: sh_activities_management
+#: model:mail.template,body_html:sh_activities_management.template_mail_activity_due_notify_email
+msgid ""
+"\n"
+"            \n"
+"            <p>Dear ${object.user_id.partner_id.name},\n"
+"            </p>\n"
+"\t\t\t<p>\n"
+"\t\t\t\tYour Activity # ${object.activity_type_id.name} \n"
+"\t\t\t\t% if object.summary \n"
+"\t\t\t\t\"${object.summary}\"\n"
+"\t\t\t\t% endif\n"
+"\t\t\t\tscheduled on ${object.date_deadline} is due.\n"
+"\t\t\t</p>\n"
+"\t\t\t\n"
+"\t\t\t<p>\t\n"
+"\t\t\t\t% if object.note\n"
+"\t\t\t\tNote :\n"
+"\t\t\t\t${object.text_note}  \n"
+"\t\t\t\t% endif\n"
+"            </p>\n"
+"\n"
+"\t\t\t<p>Thank you</p>\n"
+"\t\t\t <div style=\"display: inline-block; margin: 15px; text-align: left"
+"\">\n"
+"                    <a href=\"/mail/view?model=${object.res_model}&amp;"
+"res_id=${object.res_id}\" target=\"_blank\"\n"
+"                        style=\"padding: 5px 10px; color: #FFFFFF; text-"
+"decoration: none; background-color: #875A7B; border: 1px solid #875A7B; "
+"border-radius: 3px\"\n"
+"                    >View</a>\n"
+"                </div>\t\t\t\t\t\t\t\t\t\t\t\t\n"
+"\t\t\t"
+msgstr ""
+"\n"
+"            \n"
+"            <p>Estimado ${object.user_id.partner_id.name},\n"
+"            </p>\n"
+"\t\t\t<p>\n"
+"\t\t\t\tTu actividad # ${object.activity_type_id.name} \n"
+"\t\t\t\t% if object.summary \n"
+"\t\t\t\t\"${object.summary}\"\n"
+"\t\t\t\t% endif\n"
+"\t\t\t\tagendada el ${object.date_deadline} esta por vencer.\n"
+"\t\t\t</p>\n"
+"\t\t\t\n"
+"\t\t\t<p>\t\n"
+"\t\t\t\t% if object.note\n"
+"\t\t\t\tNota :\n"
+"\t\t\t\t${object.text_note}  \n"
+"\t\t\t\t% endif\n"
+"            </p>\n"
+"\n"
+"\t\t\t<p>Gracias</p>\n"
+"\t\t\t <div style=\"display: inline-block; margin: 15px; text-align: left"
+"\">\n"
+"                    <a href=\"/mail/view?model=${object.res_model}&amp;"
+"res_id=${object.res_id}\" target=\"_blank\"\n"
+"                        style=\"padding: 5px 10px; color: #FFFFFF; text-"
+"decoration: none; background-color: #875A7B; border: 1px solid #875A7B; "
+"border-radius: 3px\"\n"
+"                    >View</a>\n"
+"                </div>\t\t\t\t\t\t\t\t\t\t\t\t\n"
+"\t\t\t"
+
+#. module: sh_activities_management
+#: model:mail.template,subject:sh_activities_management.sh_activity_reminder_mail_template
+msgid ""
+"${object.company_id.name} Activity Reminder(Ref ${object.res_name or 'n/"
+"a' })"
+msgstr ""
+"${object.company_id.name} Recordatorio de Actividad(Ref ${object.res_name "
+"or 'n/a' })"
+
+#. module: sh_activities_management
+#: model:mail.template,subject:sh_activities_management.template_mail_activity_due_notify_email_create_user
+msgid ""
+"${object.create_uid.partner_id.name} # ${object.activity_type_id.name} - "
+"Activity Due Notification"
+msgstr ""
+"${object.user_id.partner_id.name} # ${object.activity_type_id.name} - "
+"Notificación de Vencimiento de Actividad"
+
+#. module: sh_activities_management
+#: model:mail.template,subject:sh_activities_management.template_mail_activity_due_notify_email
+msgid ""
+"${object.user_id.partner_id.name} # ${object.activity_type_id.name} - "
+"Activity Due Notification"
+msgstr ""
+"${object.user_id.partner_id.name} # ${object.activity_type_id.name} - "
+"Notificación de Vencimiento de Actividad"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid "&amp;nbsp;"
+msgstr ""
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/xml/activity_dashboard.xml:0
+#, python-format
+msgid "&times;"
+msgstr ""
+
+#. module: sh_activities_management
+#: model:mail.template,body_html:sh_activities_management.sh_activity_reminder_mail_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor="
+"\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-"
+"collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding="
+"\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: "
+"rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:"
+"white; font-weight: bold;\">\n"
+"                                      <strong>Activity Remainder (${object."
+"activity_type_id.name})</strong>\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object."
+"company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: "
+"80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding="
+"\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: "
+"rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,"
+"Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                                <p style=\"margin: 0px; padding: 0px; font-"
+"size: 13px;\">\n"
+"                                \t<strong>${object.res_model_id.name} :</"
+"strong> ${object.res_name}\n"
+"                                \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<strong>Due Date : </strong> ${object.date_deadline}\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<strong>Summary : </strong> ${object.summary}\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<strong>Assigned To : </strong> ${object.user_id.name}\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<strong>Supervisor : </strong> ${object.supervisor_id."
+"name}\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t% if object.sh_user_ids:\n"
+"\t\t\t\t\t\t\t    \t\t<strong>Assign Multi Users :</strong>\n"
+"\t\t\t\t\t\t\t\t    \t% for row in object.sh_user_ids :\n"
+"\t\t\t\t\t\t\t\t    \t\t<span class=\"badge badge-info\" style=\"padding-"
+"right:5px\">\n"
+"\t\t\t\t\t\t\t\t    \t\t\t${row.name}\n"
+"\t\t\t\t\t\t\t\t    \t\t</span>\n"
+"\t\t\t\t\t\t\t\t    \t%endfor\n"
+"\t\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t% endif\n"
+"\t\t\t\t\t\t\t    \t% if object.sh_activity_tags:\n"
+"\t\t\t\t\t\t\t    \t\t<strong>Activity Tags :</strong>\n"
+"\t\t\t\t\t\t\t\t    \t% for row in object.sh_activity_tags :\n"
+"\t\t\t\t\t\t\t\t    \t\t<span class=\"badge badge-info\" style=\"padding-"
+"right:5px\">\n"
+"\t\t\t\t\t\t\t\t    \t\t\t${row.name}\n"
+"\t\t\t\t\t\t\t\t    \t\t</span>\n"
+"\t\t\t\t\t\t\t\t    \t%endfor\n"
+"\t\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t% endif\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding="
+"\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: "
+"rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style="
+"\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;"
+"\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style="
+"\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;"
+"\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id."
+"email}\" style=\"text-decoration:none; color: white;\">${object.company_id."
+"email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id."
+"website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t</div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor="
+"\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-"
+"collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding="
+"\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: "
+"rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:"
+"white; font-weight: bold;\">\n"
+"                                      <strong>Recordatorio de Actividad "
+"(${object.activity_type_id.name})</strong>\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object."
+"company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: "
+"80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding="
+"\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: "
+"rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,"
+"Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                                <p style=\"margin: 0px; padding: 0px; font-"
+"size: 13px;\">\n"
+"                                \t<strong>${object.res_model_id.name} :</"
+"strong> ${object.res_name}\n"
+"                                \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<strong>Fecha Límite : </strong> ${object."
+"date_deadline}\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<strong>Resumen : </strong> ${object.summary}\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<strong>Asignada a : </strong> ${object.user_id.name}\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<strong>Supervisor : </strong> ${object.supervisor_id."
+"name}\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t% if object.sh_user_ids:\n"
+"\t\t\t\t\t\t\t    \t\t<strong>Asignación de múltiples usuarios :</strong>\n"
+"\t\t\t\t\t\t\t\t    \t% for row in object.sh_user_ids :\n"
+"\t\t\t\t\t\t\t\t    \t\t<span class=\"badge badge-info\" style=\"padding-"
+"right:5px\">\n"
+"\t\t\t\t\t\t\t\t    \t\t\t${row.name}\n"
+"\t\t\t\t\t\t\t\t    \t\t</span>\n"
+"\t\t\t\t\t\t\t\t    \t%endfor\n"
+"\t\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t% endif\n"
+"\t\t\t\t\t\t\t    \t% if object.sh_activity_tags:\n"
+"\t\t\t\t\t\t\t    \t\t<strong>Etiquetas de Actividad :</strong>\n"
+"\t\t\t\t\t\t\t\t    \t% for row in object.sh_activity_tags :\n"
+"\t\t\t\t\t\t\t\t    \t\t<span class=\"badge badge-info\" style=\"padding-"
+"right:5px\">\n"
+"\t\t\t\t\t\t\t\t    \t\t\t${row.name}\n"
+"\t\t\t\t\t\t\t\t    \t\t</span>\n"
+"\t\t\t\t\t\t\t\t    \t%endfor\n"
+"\t\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t\t    \t<br/>\n"
+"\t\t\t\t\t\t\t    \t% endif\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding="
+"\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: "
+"rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style="
+"\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;"
+"\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style="
+"\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;"
+"\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id."
+"email}\" style=\"text-decoration:none; color: white;\">${object.company_id."
+"email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id."
+"website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t</div>\n"
+"            "
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid ""
+"<span>&amp;laquo;</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"sr-only\">Previous</span>"
+msgstr ""
+"<span>&amp;laquo;</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"sr-only\">Anterior</span>"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid ""
+"<span>&amp;raquo;</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"sr-only\">Next</span>"
+msgstr ""
+"<span>&amp;raquo;</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"sr-only\">Siguiente</span>"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_form
+msgid "<strong>Recommended Activities</strong>"
+msgstr "<strong>Act. Recomendadas</strong"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid "Action"
+msgstr "Acción"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_dynamic_action__name
+msgid "Action Name"
+msgstr "Nombre de Acción"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_schedule_activity_view_tree
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/js/activity_dashboard.js:0
+#: model:ir.model,name:sh_activities_management.model_mail_activity
+#: model:ir.ui.menu,name:sh_activities_management.sh_activity
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_search
+#, python-format
+msgid "Activity"
+msgstr "Actividad"
+
+#. module: sh_activities_management
+#: model:ir.actions.act_window,name:sh_activities_management.sh_activity_alarm_action
+#: model:ir.ui.menu,name:sh_activities_management.sh_activity_alarm_manu
+#: model:res.groups,name:sh_activities_management.group_activity_alarm
+msgid "Activity Alarm"
+msgstr "Alamar de Actividad"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__activity_cancel
+msgid "Activity Cancel"
+msgstr "Cancelar Actividad"
+
+#. module: sh_activities_management
+#: model:ir.actions.client,name:sh_activities_management.sh_action_activity_dashboard
+#: model:ir.model,name:sh_activities_management.model_activity_dashboard
+#: model:ir.module.category,description:sh_activities_management.module_activity_category
+#: model:ir.module.category,name:sh_activities_management.module_activity_category
+#: model:ir.ui.menu,name:sh_activities_management.sh_activity_dashboard
+msgid "Activity Dashboard"
+msgstr "Tablero de Actividades"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_config_view
+msgid "Activity Document Model Configuration"
+msgstr "Modelo de Documento de Configuración de Actividad"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__activity_done
+msgid "Activity Done"
+msgstr "Actividad Hecha"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/xml/activity_dashboard.xml:0
+#: model:ir.actions.act_window,name:sh_activities_management.feedback_wizard_action
+#: model:ir.actions.act_window,name:sh_activities_management.mark_as_done_feedback_wizard_action
+#: model:ir.model,name:sh_activities_management.model_activity_feedback
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.feedback_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.mark_as_done_feedback_wizard_view
+#, python-format
+msgid "Activity Feedback"
+msgstr "Retroalimentación Actividad"
+
+#. module: sh_activities_management
+#: model:res.groups,name:sh_activities_management.group_activity_manager
+msgid "Activity Manager"
+msgstr "Gestor de Actividad"
+
+#. module: sh_activities_management
+#: model:ir.model,name:sh_activities_management.model_mail_activity_mixin
+msgid "Activity Mixin"
+msgstr "Mezcla de actividades"
+
+#. module: sh_activities_management
+#: model:ir.actions.server,name:sh_activities_management.cron_activity_reminder_ir_actions_server
+#: model:ir.cron,cron_name:sh_activities_management.cron_activity_reminder
+#: model:ir.cron,name:sh_activities_management.cron_activity_reminder
+msgid "Activity Reminder"
+msgstr "Recordatorio de Actividad"
+
+#. module: sh_activities_management
+#: code:addons/sh_activities_management/models/activity_alarm.py:0
+#, python-format
+msgid "Activity Reminder ()"
+msgstr "Recordatorio de Actividad ()"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_display_activity_reminder
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_display_activity_reminder
+msgid "Activity Reminder ?"
+msgstr "Recordatorio de Actividad ?"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_config_view
+msgid "Activity Reminder Configuration"
+msgstr "Configuración de Recordatorio de Actividad"
+
+#. module: sh_activities_management
+#: model:res.groups,name:sh_activities_management.group_activity_supervisor
+msgid "Activity Supervisor"
+msgstr "Actividad del Supervisor"
+
+#. module: sh_activities_management
+#: model:ir.actions.act_window,name:sh_activities_management.sh_activity_tags_action
+msgid "Activity Tag"
+msgstr "Etiqueta de Actividad"
+
+#. module: sh_activities_management
+#: model:ir.model,name:sh_activities_management.model_sh_activity_tags
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__sh_activity_tags
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__sh_activity_tags
+#: model:ir.ui.menu,name:sh_activities_management.sh_activity_tags
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_search
+msgid "Activity Tags"
+msgstr "Etiquetas de Actividad"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__sh_activity_type_id
+msgid "Activity Type"
+msgstr "Tipo de Actividad"
+
+#. module: sh_activities_management
+#: model:res.groups,name:sh_activities_management.group_activity_user
+msgid "Activity User"
+msgstr "Actividad de Usuario"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_dynamic_action_form
+msgid "Add Action"
+msgstr "Añadir Acción"
+
+#. module: sh_activities_management
+#: model:ir.model,name:sh_activities_management.model_sh_activity_alarm
+msgid "Alarm Reminder"
+msgstr "Alarma de Recordatorio"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/js/activity_dashboard.js:0
+#: model:ir.actions.act_window,name:sh_activities_management.sh_all_activity_action
+#: model:ir.actions.act_window,name:sh_activities_management.sh_reporting_action
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_display_all_activities_counter
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_display_all_activities_table
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_display_all_activities_counter
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_display_all_activities_table
+#: model:ir.ui.menu,name:sh_activities_management.all_activity
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_count_box
+#, python-format
+msgid "All Activities"
+msgstr "Todas las Actividades"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_all_table
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_all_table
+msgid "All Activities Table Limit"
+msgstr "Tabla del Límite de todas las actividades"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_dynamic_action__model_id
+msgid "Applies To"
+msgstr "Aplica a"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_form
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_search
+msgid "Archived Activities"
+msgstr "Activ. Archivadas"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__sh_user_ids
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__sh_user_ids
+msgid "Assign Multi Users"
+msgstr "Asignación de múltiples usuario"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_search
+msgid "Assign To"
+msgstr "Asignado a"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid "Assigned To"
+msgstr "Asignado a"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__sh_user_id
+msgid "Assigned to"
+msgstr "Asignado a"
+
+#. module: sh_activities_management
+#: code:addons/sh_activities_management/models/mail_activity.py:0
+#, python-format
+msgid ""
+"Assigned user %s has no access to the document and is not able to handle "
+"this activity."
+msgstr ""
+"El usuario asignado %s no tiene acceso a este documento y no puede ejecutar "
+"esta actividad."
+
+#. module: sh_activities_management
+#: model:ir.actions.server,name:sh_activities_management.sh_cancel_activity_action
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.feedback_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.mark_as_done_feedback_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_popup_view
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: sh_activities_management
+#: model:ir.model.fields.selection,name:sh_activities_management.selection__mail_activity__state__cancel
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/js/activity_dashboard.js:0
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_display_cancelled_activities_counter
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_display_cancelled_activities_table
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_display_cancelled_activities_counter
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_display_cancelled_activities_table
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_count_box
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_search
+#, python-format
+msgid "Cancelled Activities"
+msgstr "Activ. Canceladas"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_cancel_table
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_cancel_table
+msgid "Cancelled Activities Table Limit"
+msgstr "Tabla Límite de Activ. Canceladas"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/xml/activity_dashboard.xml:0
+#, python-format
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_tags__color
+msgid "Color"
+msgstr "Color"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__color
+msgid "Color Index"
+msgstr "Índice de Color"
+
+#. module: sh_activities_management
+#: model:ir.model,name:sh_activities_management.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__company_id
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_alarm__company_id
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/js/activity_dashboard.js:0
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_display_completed_activities_counter
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_display_completed_activities_table
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_display_completed_activities_counter
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_display_completed_activities_table
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_count_box
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_search
+#, python-format
+msgid "Completed Activities"
+msgstr "Activ. Completadas"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_completed_table
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_completed_table
+msgid "Completed Activities Table Limit"
+msgstr "Tabla Límite de Activ. Completadas"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__date_done
+msgid "Completed Date"
+msgstr "Fecha Completada"
+
+#. module: sh_activities_management
+#: model:ir.model,name:sh_activities_management.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de Configuración"
+
+#. module: sh_activities_management
+#: model:ir.ui.menu,name:sh_activities_management.menu_config
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_config_view
+msgid "Configure Activity Alarm"
+msgstr "Configurar Alarma de Actividad"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_config_view
+msgid "Counter"
+msgstr "Contador"
+
+#. module: sh_activities_management
+#: model_terms:ir.actions.act_window,help:sh_activities_management.sh_activity_alarm_action
+msgid "Create a new Activity Alarm"
+msgstr "Crear nueva Alarma de Actividad"
+
+#. module: sh_activities_management
+#: model_terms:ir.actions.act_window,help:sh_activities_management.sh_activity_tags_action
+msgid "Create a new Tag"
+msgstr "Crear nueva etiqueta"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_dashboard__create_uid
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_feedback__create_uid
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_alarm__create_uid
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_dynamic_action__create_uid
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_tags__create_uid
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__create_uid
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mark_as_done__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_dashboard__create_date
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_feedback__create_date
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_alarm__create_date
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_dynamic_action__create_date
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_tags__create_date
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__create_date
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mark_as_done__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: sh_activities_management
+#: model:ir.ui.menu,name:sh_activities_management.sh_menu_activity_dashboard
+msgid "Dashboard"
+msgstr "Tablero"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_config_view
+msgid "Dashboard Configuration"
+msgstr "Configuración de Tablero"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_config_view
+msgid "Data Table"
+msgstr "Tabla de Datos"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid "Deadline Date"
+msgstr "Fecha Límite"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_config_view
+msgid "Display Dashboard Counter and Data Table Configuration"
+msgstr ""
+"Mostrar el contador del tablero y la configuración de la tabla de datos"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_display_multi_user
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_display_multi_user
+msgid "Display Multi Users ?"
+msgstr "¿Mostrar múltiples usuarios?"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_dashboard__display_name
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_feedback__display_name
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_alarm__display_name
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_dynamic_action__display_name
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_tags__display_name
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__display_name
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mark_as_done__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_document_model
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_document_model
+msgid "Display document model wise activity ?"
+msgstr "¿Mostrar actividad del modelo de documento?"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_search
+msgid "Document Model"
+msgstr "Modelo de Documento"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_document_model_ids
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_document_model_ids
+msgid "Document Models"
+msgstr "Modelos de Documento"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/xml/activity_dashboard.xml:0
+#: model:ir.model.fields.selection,name:sh_activities_management.selection__mail_activity__state__done
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.feedback_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.mark_as_done_feedback_wizard_view
+#, python-format
+msgid "Done"
+msgstr "Hecho"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_form
+msgid "Done & Launch Next"
+msgstr "Hecho y lanzar siguiente"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.feedback_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_form
+msgid "Done & Schedule Next"
+msgstr "Hecho y agendar siguiente"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_feedback__done_button_pressed
+msgid "Done Button Pressed"
+msgstr "Botón Hecho presionado"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_due_table
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_due_table
+msgid "Due Activities Table Limit"
+msgstr "Tabla Límite de Activ. Atrasadas"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__sh_date_deadline
+msgid "Due Date"
+msgstr "Fecha Límite"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_tree
+msgid "Edit"
+msgstr "Editar"
+
+#. module: sh_activities_management
+#: model:ir.model.fields.selection,name:sh_activities_management.selection__sh_activity_alarm__type__email
+msgid "Email"
+msgstr "Email"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/xml/activity_dashboard.xml:0
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_feedback__feedback
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__feedback
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mark_as_done__feedback
+#, python-format
+msgid "Feedback"
+msgstr "Comentarios"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_dynamic_action__sh_group_ids
+msgid "Groups"
+msgstr "Grupos"
+
+#. module: sh_activities_management
+#: model:ir.model.fields.selection,name:sh_activities_management.selection__sh_activity_alarm__sh_reminder_unit__hour(s)
+msgid "Hour(s)"
+msgstr "Hora(s)"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_dashboard__id
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_feedback__id
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_alarm__id
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_dynamic_action__id
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_tags__id
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__id
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mark_as_done__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__sh_create_individual_activity
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__sh_create_individual_activity
+msgid "Individual activities for multi users ?"
+msgstr "¿Actividades individuales para múltiples usuarios?"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_dashboard____last_update
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_feedback____last_update
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_alarm____last_update
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_dynamic_action____last_update
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_tags____last_update
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity____last_update
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mark_as_done____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_dashboard__write_uid
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_feedback__write_uid
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_alarm__write_uid
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_dynamic_action__write_uid
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_tags__write_uid
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__write_uid
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mark_as_done__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_dashboard__write_date
+#: model:ir.model.fields,field_description:sh_activities_management.field_activity_feedback__write_date
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_alarm__write_date
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_dynamic_action__write_date
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_tags__write_date
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__write_date
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mark_as_done__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_form
+msgid "Log a note..."
+msgstr "Registrar una nota..."
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_form
+msgid "Log an Activity"
+msgstr "Registrar una actividad"
+
+#. module: sh_activities_management
+#: model:ir.model,name:sh_activities_management.model_sh_mark_as_done
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid "Mark As Done"
+msgstr "Marcar como Hecho"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_form
+msgid "Mark as Done"
+msgstr "Marcar como Hecho"
+
+#. module: sh_activities_management
+#: model:ir.actions.act_window,name:sh_activities_management.mass_mark_as_done_multi_action
+msgid "Mark as done"
+msgstr "Marcar como Hecho"
+
+#. module: sh_activities_management
+#: model:ir.actions.act_window,name:sh_activities_management.sh_activity_dynamic_action_action
+#: model:ir.ui.menu,name:sh_activities_management.sh_activity_dynamic_action_action_menu
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_dynamic_action_form
+#: model:res.groups,name:sh_activities_management.group_assign_multiple_activity
+msgid "Mass Activities Dynamic Action"
+msgstr "Acción Dinámica de Actividades Masivas"
+
+#. module: sh_activities_management
+#: model:ir.model.fields.selection,name:sh_activities_management.selection__sh_activity_alarm__sh_reminder_unit__minute(s)
+msgid "Minute(s)"
+msgstr "Minuto(s)"
+
+#. module: sh_activities_management
+#: model:ir.actions.server,name:sh_activities_management.sales_activity_notify_ir_actions_server
+#: model:ir.cron,cron_name:sh_activities_management.sales_activity_notify
+#: model:ir.cron,name:sh_activities_management.sales_activity_notify
+msgid "Missed Activity Notify"
+msgstr "Notificación de Actividad Perdida"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/xml/activity_dashboard.xml:0
+#, python-format
+msgid "Models"
+msgstr "Modelos"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_config_view
+msgid "Multi Users in Activity Configuration"
+msgstr "Configuración de Actividad con Múltiples Usuarios"
+
+#. module: sh_activities_management
+#: model:ir.actions.act_window,name:sh_activities_management.sh_action_my_activities
+#: model:ir.ui.menu,name:sh_activities_management.sh_my_activity
+msgid "My Activities"
+msgstr "Mis Actividades"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_alarm__name
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid "Next"
+msgstr "Siguiente"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid "No Any Data Available"
+msgstr "No hay información disponible"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__sh_note
+msgid "Note"
+msgstr "Nota"
+
+#. module: sh_activities_management
+#: code:addons/sh_activities_management/models/mail_activity.py:0
+#, python-format
+msgid "Notes"
+msgstr "Notas"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__text_note
+msgid "Notes In Char format "
+msgstr "Notas en formato texto "
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_form
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_tree
+msgid "Origin"
+msgstr "Origen"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/js/activity_dashboard.js:0
+#, python-format
+msgid "Origin Activity"
+msgstr "Origen de la Actividad"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/js/activity_dashboard.js:0
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_display_overdue_activities_counter
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_display_overdue_activities_table
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_display_overdue_activities_counter
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_display_overdue_activities_table
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_count_box
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#, python-format
+msgid "Overdue Activities"
+msgstr "Activ. Atrasadas"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid "Page navigation example"
+msgstr "Ejemplo de Página de Navegación"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/js/activity_dashboard.js:0
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_display_planned_activities_counter
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_display_planned_activities_table
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_display_planned_activities_counter
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_display_planned_activities_table
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_count_box
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+#, python-format
+msgid "Planned Activities"
+msgstr "Activ. Planeadas"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_company__sh_planned_table
+#: model:ir.model.fields,field_description:sh_activities_management.field_res_config_settings__sh_planned_table
+msgid "Planned Activities Table Limit"
+msgstr "Tabla Límite de Activ. Planeadas"
+
+#. module: sh_activities_management
+#: code:addons/sh_activities_management/models/create_action.py:0
+#, python-format
+msgid "Please Select Model."
+msgstr "Por favor seleccionar modelo."
+
+#. module: sh_activities_management
+#: model:ir.model.fields.selection,name:sh_activities_management.selection__sh_activity_alarm__type__popup
+msgid "Popup"
+msgstr "Ventana Emergente"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid "Previous"
+msgstr "Previo"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/xml/activity_dashboard.xml:0
+#, python-format
+msgid "Records"
+msgstr "Registros"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_dynamic_action__action_id
+msgid "Related Action"
+msgstr "Actividad Relacionada"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__reference
+msgid "Related Document"
+msgstr "Documento Relacionado"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_form
+msgid "Related Document Model"
+msgstr "Modelo del Documento Relacionado"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_alarm__sh_remind_before
+msgid "Reminder Before"
+msgstr "Recordar antes"
+
+#. module: sh_activities_management
+#: code:addons/sh_activities_management/models/activity_alarm.py:0
+#, python-format
+msgid "Reminder Before can't set less than 1 Hour."
+msgstr "Recordatorio no puede ser menor a una hora."
+
+#. module: sh_activities_management
+#: code:addons/sh_activities_management/models/activity_alarm.py:0
+#, python-format
+msgid "Reminder Before can't set less than 300 Seconds."
+msgstr "Recordatorio no puede ser menor a 300 segundos."
+
+#. module: sh_activities_management
+#: code:addons/sh_activities_management/models/activity_alarm.py:0
+#, python-format
+msgid "Reminder Before can't set less than 5 Minutes."
+msgstr "Recordatorio no puede ser menor a 5 minutos."
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__sh_date_deadline
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__sh_reminder_date_deadline
+msgid "Reminder Due Date"
+msgstr "Recordatorio de Fecha Límite"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_alarm__sh_reminder_unit
+msgid "Reminder Unit"
+msgstr "Unidad de Recodatorio"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__sh_activity_alarm_ids
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__sh_activity_alarm_ids
+msgid "Reminders"
+msgstr "Recordatorios"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_dynamic_action_form
+msgid "Remove Action"
+msgstr "Remover Acción"
+
+#. module: sh_activities_management
+#: model:ir.ui.menu,name:sh_activities_management.reporting
+msgid "Reporting"
+msgstr "Reporte"
+
+#. module: sh_activities_management
+#: model:ir.model,name:sh_activities_management.model_sh_mail_activity
+msgid "SH Mail Activity"
+msgstr "SH Correo de Actividad"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_popup_view
+msgid "Schedule"
+msgstr "Agendar"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_schedule_activity_view_calendar
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_schedule_activity_view_graph
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_schedule_activity_view_pivot
+msgid "Schedule Activity"
+msgstr "Agendar Actividad"
+
+#. module: sh_activities_management
+#: model:ir.actions.act_window,name:sh_activities_management.sh_action_mail_activity_popup
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_popup_view
+msgid "Schedule Multiple Activity"
+msgstr "Agendar Múltiples Actividades"
+
+#. module: sh_activities_management
+#: code:addons/sh_activities_management/models/mail_activity.py:0
+#: code:addons/sh_activities_management/wizard/feedback.py:0
+#, python-format
+msgid "Schedule an Activity"
+msgstr "Planificar una actividad"
+
+#. module: sh_activities_management
+#: model:ir.model.fields.selection,name:sh_activities_management.selection__sh_activity_alarm__sh_reminder_unit__second(s)
+msgid "Second(s)"
+msgstr "Segundo(s)"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/xml/activity_dashboard.xml:0
+#, python-format
+msgid "Select Date"
+msgstr "Seleccionar Fecha"
+
+#. module: sh_activities_management
+#: model:ir.ui.menu,name:sh_activities_management.menu_config_activity
+msgid "Settings"
+msgstr "Ajustes"
+
+#. module: sh_activities_management
+#: model:ir.model,name:sh_activities_management.model_sh_activity_dynamic_action
+msgid "Sh Activity Create Action"
+msgstr "SH Crear acción de actividad"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__sh_display_multi_user
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__sh_display_multi_user
+msgid "Sh Display Multi User"
+msgstr "SH Mostrar Múltiples usuarios"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__sh_state
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__state
+msgid "State"
+msgstr "Estado"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__state_compute
+msgid "State Compute"
+msgstr "Estado Computado"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+msgid "Status"
+msgstr "Estado"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__sh_summary
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_mail_activity__supervisor_id
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_mail_activity__sh_supervisor_id
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_search
+msgid "Supervisor"
+msgstr "Supervisor"
+
+#. module: sh_activities_management
+#: model:ir.actions.act_window,name:sh_activities_management.sh_supervisor_activity_action
+#: model:ir.ui.menu,name:sh_activities_management.sh_supervisor_activity
+msgid "Supervisor Activities"
+msgstr "Activ(s).  del Supervisor"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/xml/activity_dashboard.xml:0
+#, python-format
+msgid "Supervisors"
+msgstr "Supervisores"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_tags__name
+msgid "Tag Name"
+msgstr "Nombre de Etiqueta"
+
+#. module: sh_activities_management
+#: model:ir.model.constraint,message:sh_activities_management.constraint_sh_activity_tags_name_uniq
+msgid "Tag name already exists !"
+msgstr "¡El nombre de la etiqueta ya existe!"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_tags_view_tree
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,help:sh_activities_management.field_sh_activity_dynamic_action__model_id
+msgid "The model this field belongs to"
+msgstr "El modelo de este campo pertenece a"
+
+#. module: sh_activities_management
+#: code:addons/sh_activities_management/models/mail_activity.py:0
+#, python-format
+msgid "Today's Meetings"
+msgstr "Reunión de hoy"
+
+#. module: sh_activities_management
+#: model:ir.model.fields,field_description:sh_activities_management.field_sh_activity_alarm__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+msgid "Unarchive"
+msgstr "Desarchivar"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_activity_config_view
+msgid "Update Old Activity Data"
+msgstr "Actualizar dato de actividad antigua"
+
+#. module: sh_activities_management
+#. openerp-web
+#: code:addons/sh_activities_management/static/src/xml/activity_dashboard.xml:0
+#: model:ir.model,name:sh_activities_management.model_res_users
+#, python-format
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_all_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_cancelled_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_completed_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_overdue_tbl
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_crm_db_activity_todo_tbl
+msgid "View"
+msgstr "Ver"
+
+#. module: sh_activities_management
+#: model_terms:ir.ui.view,arch_db:sh_activities_management.sh_mail_activity_view_form
+msgid "e.g. Discuss proposal"
+msgstr "ejem. Discutir Presupuesto"
