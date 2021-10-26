@@ -37,6 +37,17 @@ class Quotation(models.Model):
     user_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True)
     with_standard_price = fields.Boolean(compute='_compute_with_standard_price')
 
+    account_id = fields.Many2one('account.account', string='Cuenta Contable',
+        domain=[('deprecated', '=', False)], ondelete='restrict')
+    partner_shipping_id = fields.Many2one('res.partner',
+        string='Dirección de Entrega',
+        readonly=True,
+        states = {'draft': [('readonly', False)]},)
+    delivery_date = fields.Date(
+        string='Fecha de Entrega a Cliente',
+        readonly=True,
+        states = {'draft': [('readonly', False)]},)
+
     @api.depends('quote_line','quote_line.price_unit')
     def _compute_with_standard_price(self):
         for record in self:
@@ -112,6 +123,8 @@ class Quotation(models.Model):
                 purchase.message_post_with_view('mail.message_origin_link',
                     values={'self': purchase, 'origin': line.quotation_id},
                     subtype_id=self.env.ref('mail.mt_note').id)
+                if self.user_id:
+                    purchase.user_id = self.user_id
                 orders+=1
         if orders > 1:
             msj += "<b><h4>" + str(orders) + " Solicitudes de compra generadas</h4></b>"
