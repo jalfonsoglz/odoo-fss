@@ -17,6 +17,7 @@ class SaleOrder(models.Model):
             ('supply', 'Suministro'),
             ('construction', 'Obra'),
             ('extra_time', 'Tiempo Extra'),
+            ('project', 'Proyectos'),
         ],
         string='Tipo de Cotización', readonly=True, copy=False,
         states={'draft': [('readonly', False)], 'sent': [('readonly', False)]},
