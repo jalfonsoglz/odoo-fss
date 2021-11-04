@@ -20,7 +20,7 @@ class SaleOrder(models.Model):
             ('project', 'Proyectos'),
         ],
         string='Tipo de Cotización', readonly=True, copy=False,
-        states={'draft': [('readonly', False)], 'sent': [('readonly', False)]},
+        states={'draft': [('readonly', False)], 'sent': [('readonly', False)], 'sale': [('readonly', False)], 'done': [('readonly', False)]},
     )
 
     margin_percent = fields.Float(string="Margin(%)", compute='_product_margin_percent')
