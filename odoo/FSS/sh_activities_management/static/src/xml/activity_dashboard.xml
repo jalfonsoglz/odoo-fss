@@ -46,17 +46,17 @@
 					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6 mb-3">
 						<div class="sh_btn">
 							<div class="dropdown">
-								<input class="form-control" list="crm_days_filter_list" name="days" id="days" placeholder="Select Date"/>
+								<input class="form-control" list="crm_days_filter_list" name="days" id="days" placeholder="Seleccionar Fecha"/>
   <datalist id="crm_days_filter_list">
-    <option data-id="today" value="Today"></option>
-									<option data-id="yesterday" value="Yesterday"></option>
-									<option data-id="weekly" value="Current Week"></option>
-									<option data-id="prev_week" value="Previous Week"></option>
-									<option data-id="monthly" value="Current Month"></option>
-									<option data-id="prev_month" value="Previous Month"></option>
-									<option data-id="cur_year" value="Current Year"></option>
-									<option data-id="prev_year" value="Previous Year"></option>
-									<option data-id="custom" value="Custom"></option>
+    <option data-id="today" value="Hoy"></option>
+									<option data-id="yesterday" value="Ayer"></option>
+									<option data-id="weekly" value="Semana Actual"></option>
+									<option data-id="prev_week" value="Semana Anterior"></option>
+									<option data-id="monthly" value="Mes Actual"></option>
+									<option data-id="prev_month" value="Mes Anterior"></option>
+									<option data-id="cur_year" value="Año Actual"></option>
+									<option data-id="prev_year" value="Año Anterior"></option>
+									<option data-id="custom" value="Personalizado"></option>
   </datalist>
 							</div>
 						</div>
