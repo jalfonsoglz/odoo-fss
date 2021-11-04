@@ -53,6 +53,15 @@
       <xpath expr="//field[@name='customer_po']" position="after">
         <field name="requisitor_ref"/>
       </xpath>
+      <xpath expr="//field[@name='account_analytic_id']" position="after">
+        <field name="account_id"/>
+      </xpath>
+      <xpath expr="//field[@name='customer']" position="after">
+        <field name="partner_shipping_id"/>
+      </xpath>
+      <xpath expr="//field[@name='quote_date']" position="after">
+        <field name="delivery_date"/>
+      </xpath>
     </field>
   </record>
 
