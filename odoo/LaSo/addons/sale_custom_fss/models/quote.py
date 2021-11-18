@@ -33,8 +33,7 @@ class Quotation(models.Model):
     po_count = fields.Integer(string='Purchase Orders', compute='_compute_purchase_order')
 
     opportunity_id = fields.Many2one(
-        'crm.lead', string='Opportunity', domain="[('type', '=', 'opportunity')]", copy = False
-    states = {'approved': [('readonly', True)], 'done': [('readonly', True)]},)
+        'crm.lead', string='Opportunity', domain="[('type', '=', 'opportunity')]", copy = False)
 
     user_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True)
     with_standard_price = fields.Boolean(compute='_compute_with_standard_price')
