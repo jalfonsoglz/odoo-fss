@@ -21,7 +21,7 @@ class Quotation(models.Model):
                              copy = False,
                              default=lambda self: _('New'))
     requisitor_ref = fields.Char(string = 'Número de Solicitud de Requisitor',
-                             copy = False
+                             copy = False,
                              states = {'approved': [('readonly', True)], 'done': [('readonly', True)]},)
 
     order_id = fields.Many2one('sale.order',
