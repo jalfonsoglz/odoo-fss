@@ -12,7 +12,7 @@ class Quotation(models.Model):
     customer_po = fields.Char(string = 'OC de cliente',
                               required = False,
                               readonly = False,
-                              states = {'approved': [('readonly', True)], 'done': [('readonly', True)]},
+                              states = {'done': [('readonly', True)]},
                               index = True)
     sequence = fields.Char(string = 'Folio',
                              required = True,
@@ -22,7 +22,7 @@ class Quotation(models.Model):
                              default=lambda self: _('New'))
     requisitor_ref = fields.Char(string = 'Número de Solicitud de Requisitor',
                              copy = False,
-                             states = {'approved': [('readonly', True)], 'done': [('readonly', True)]},)
+                             states = {'done': [('readonly', True)]},)
 
     order_id = fields.Many2one('sale.order',
                                string = 'Presupuesto',
