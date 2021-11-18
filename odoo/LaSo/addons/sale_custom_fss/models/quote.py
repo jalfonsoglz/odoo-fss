@@ -12,7 +12,7 @@ class Quotation(models.Model):
     customer_po = fields.Char(string = 'OC de cliente',
                               required = False,
                               readonly = False,
-                              states = {'approved': [('readonly', True)], 'done': [('readonly', True)]},
+                              states = {'done': [('readonly', True)]},
                               index = True)
     sequence = fields.Char(string = 'Folio',
                              required = True,
@@ -21,7 +21,8 @@ class Quotation(models.Model):
                              copy = False,
                              default=lambda self: _('New'))
     requisitor_ref = fields.Char(string = 'Número de Solicitud de Requisitor',
-                             copy = False)
+                             copy = False,
+                             states = {'done': [('readonly', True)]},)
 
     order_id = fields.Many2one('sale.order',
                                string = 'Presupuesto',
@@ -41,12 +42,12 @@ class Quotation(models.Model):
         domain=[('deprecated', '=', False)], ondelete='restrict')
     partner_shipping_id = fields.Many2one('res.partner',
         string='Dirección de Entrega',
-        readonly=True,
-        states = {'draft': [('readonly', False)]},)
+        readonly=False,
+        states = {'approved': [('readonly', True)], 'done': [('readonly', True)]},)
     delivery_date = fields.Date(
         string='Fecha de Entrega a Cliente',
-        readonly=True,
-        states = {'draft': [('readonly', False)]},)
+        readonly=False,
+        states = {'approved': [('readonly', True)], 'done': [('readonly', True)]},)
 
     @api.depends('quote_line','quote_line.price_unit')
     def _compute_with_standard_price(self):
